@@ -1,5 +1,6 @@
 export type LinkItem = {
   id: string;
+  emoji: string;
   title: string;
   url: string;
 };
@@ -14,11 +15,10 @@ export type Profile = {
 // 샘플 데이터: 실제 프로필 정보와 링크로 바꿔서 사용하세요.
 export const profile: Profile = {
   name: "Jessica Son",
-  bio: "세계 최강 바이브코더",
-  imageUrl: "/profile-placeholder.svg",
+  bio: "SCM 데이터 분석가 : AI 에 관심이 많은 초보자",
+  imageUrl: "/profile.jpg",
   links: [
-    { id: "github", title: "GitHub", url: "https://github.com" },
-    { id: "linkedin", title: "LinkedIn", url: "https://linkedin.com" },
-    { id: "blog", title: "Blog", url: "https://blog.naver.com" },
+    { id: "github", emoji: "🐙", title: "Github", url: "https://github.com/damongmom" },
+    { id: "blog", emoji: "📝", title: "Blog", url: "https://blog.naver.com/mimopa" },
   ],
 };

@@ -33,7 +33,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={isDark ? "밝은 화면으로 전환" : "어두운 화면으로 전환"}
-      className="fixed right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-sm transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
+      className="fixed right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-muted shadow-glass backdrop-blur-xl transition-colors duration-200 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
     >
       {isDark ? (
         // 해 아이콘

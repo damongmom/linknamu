@@ -1,17 +1,35 @@
 type LinkCardProps = {
+  emoji: string;
   title: string;
   url: string;
 };
 
-export default function LinkCard({ title, url }: LinkCardProps) {
+export default function LinkCard({ emoji, title, url }: LinkCardProps) {
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block w-full rounded-xl border border-zinc-200 bg-white px-5 py-4 text-center font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 dark:border-zinc-700 dark:bg-zinc-900"
+      className="group flex w-full items-center gap-4 rounded-3xl border border-line bg-surface px-6 py-5 font-medium tracking-tight shadow-glass backdrop-blur-xl transition-colors duration-200 hover:bg-surface-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground active:opacity-80"
     >
-      {title}
+      <span aria-hidden="true" className="text-xl leading-none">
+        {emoji}
+      </span>
+      <span className="flex-1">{title}</span>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="text-muted transition-colors duration-200 group-hover:text-foreground"
+      >
+        <path d="M7 17 17 7M8 7h9v9" />
+      </svg>
     </a>
   );
 }
